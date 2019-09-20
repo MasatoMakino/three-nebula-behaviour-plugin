@@ -1,0 +1,43 @@
+{
+  "name": "three-nebula-behaviour-plugin",
+  "version": "0.1.0",
+  "description": "Custom behaviours for three-nebula.",
+  "main": "./bin/index.js",
+  "types": "./bin/index.d.ts",
+  "repository": "https://MasatoMakino@github.com/MasatoMakino/three-nebula-behaviour-plugin.git",
+  "author": "MasatoMakino <unagiinu.g@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "three": "^0.108.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "dat.gui": "^0.7.6",
+    "gulp": "^4.0.2",
+    "gulptask-dev-server": "https://github.com/MasatoMakino/gulptask-dev-server.git",
+    "gulptask-tsc": "https://github.com/MasatoMakino/gulptask-tsc.git",
+    "gulptask-tsdoc": "https://github.com/MasatoMakino/gulptask-tsdoc.git",
+    "gulptask-webpack": "https://github.com/MasatoMakino/gulptask-webpack.git",
+    "husky": "^3.0.5",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "three": "^0.108.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "start:dev": "gulp start_dev",
+    "build": "npm run prettier:src && gulp build",
+    "build:clean": "npm run prettier:src && gulp build_clean",
+    "prettier:src": "prettier --write './**/*.{js,ts,json}' ",
+    "doc:card": "repoimg -n three-nebula-behaviour-plugin -o ./docs/card.png",
+    "checkout:docs": "git checkout HEAD ./docs/api/ ./docs/demo/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
