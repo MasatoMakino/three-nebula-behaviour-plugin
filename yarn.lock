@@ -5930,6 +5930,14 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
+three-nebula@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/three-nebula/-/three-nebula-5.0.1.tgz#7b23225020ffdc6c40dd23a73c4342307f8a3809"
+  integrity sha512-0BpM25xcCm2P6eAVBPCK4Ev1DD+7J1mBzCLg5yBcHsOqDD3FR1oj+2wTNxLJYZ5eRgdBHir8rYh4N5Bs/0ETvA==
+  dependencies:
+    lodash "^4.17.15"
+    uuid "^3.3.2"
+
 three@^0.108.0:
   version "0.108.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.108.0.tgz#53d26597c7932f214bb43f4655e566d2058143b5"
@@ -6292,6 +6300,11 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
+
+uuid@^3.3.2:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
+  integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
 
 v8flags@^3.0.1:
   version "3.1.3"
