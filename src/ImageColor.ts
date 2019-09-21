@@ -1,10 +1,20 @@
 import { Particle } from "three-nebula";
+
 import { Behaviour } from "three-nebula/src/behaviour";
+import { getEasingByName } from "three-nebula/src/ease";
+import { SUPPORTED_JSON_BEHAVIOUR_TYPES } from "three-nebula/src/core/constants";
 
 export interface ImageColorCanvas {
   canvas: HTMLCanvasElement;
   buffer?: Uint8ClampedArray;
   isLoaded: boolean;
+}
+
+export interface ImageColorJSON {
+  url: string;
+  life?: number;
+  easing?: string;
+  isEnabled?: boolean;
 }
 
 export class ImageColor extends Behaviour {
@@ -19,10 +29,12 @@ export class ImageColor extends Behaviour {
     isEnabled: boolean = true
   ) {
     super(life, easing, ImageColor.TYPE, isEnabled);
-
-    //TODO add type list;
-
     this.reset(url);
+  }
+
+  //TODO Plugin can not insert Behaviour Type Constant.
+  public static addSupport(): void {
+    SUPPORTED_JSON_BEHAVIOUR_TYPES.push(this.TYPE);
   }
 
   reset(url: string, life?: number, easing?: Function) {
@@ -64,9 +76,8 @@ export class ImageColor extends Behaviour {
 
   mutate(particle, time, index) {
     //TODO : color.mutate.energize has not index prop.
-
     // @ts-ignore
-    this.energize(particle, time, index);
+    this.energize(particle, time);
 
     if (particle.transform.colorCanvas.isLoaded) {
       const canvas = particle.transform.colorCanvas.canvas;
@@ -86,5 +97,14 @@ export class ImageColor extends Behaviour {
       particle.color.b = 0;
       particle.alpha = 0.0;
     }
+  }
+
+  /**
+   * Creates a ImageColor behaviour from JSON.
+   * @param json
+   */
+  public static fromJSON(json: ImageColorJSON): ImageColor {
+    const { url, life, easing, isEnabled = true } = json;
+    return new ImageColor(url, life, getEasingByName(easing), isEnabled);
   }
 }
