@@ -1,6 +1,7 @@
 import { Behaviour } from "three-nebula/src/behaviour";
 import { getEasingByName } from "three-nebula/src/ease";
 import { SUPPORTED_JSON_BEHAVIOUR_TYPES } from "three-nebula/src/core/constants";
+import { ColorCanvas } from "./ColorCanvas";
 export class ImageColor extends Behaviour {
     constructor(url, life, easing, isEnabled = true) {
         super(life, easing, ImageColor.TYPE, isEnabled);
@@ -42,15 +43,9 @@ export class ImageColor extends Behaviour {
         // @ts-ignore
         this.energize(particle, time);
         if (particle.transform.colorCanvas.isLoaded) {
-            const canvas = particle.transform.colorCanvas.canvas;
-            const buffer = particle.transform.colorCanvas.buffer;
+            ColorCanvas.updateParticleColor(particle, particle.transform.colorCanvas, 
             // @ts-ignore
-            const x = Math.floor(canvas.width * (1.0 - this.energy));
-            const index = x * 4;
-            particle.color.r = buffer[index] / 255;
-            particle.color.g = buffer[index + 1] / 255;
-            particle.color.b = buffer[index + 2] / 255;
-            particle.alpha = buffer[index + 3] / 255;
+            this.energy);
         }
         else {
             particle.color.r = 0;

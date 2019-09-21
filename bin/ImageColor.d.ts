@@ -1,8 +1,7 @@
 import { Particle } from "three-nebula";
 import { Behaviour } from "three-nebula/src/behaviour";
-export interface ImageColorCanvas {
-    canvas: HTMLCanvasElement;
-    buffer?: Uint8ClampedArray;
+import { ColorCanvas } from "./ColorCanvas";
+export interface ImageColorCanvas extends ColorCanvas {
     isLoaded: boolean;
 }
 export interface ImageColorJSON {
@@ -19,7 +18,7 @@ export declare class ImageColor extends Behaviour {
     reset(url: string, life?: number, easing?: Function): void;
     initCanvas(url: string): void;
     initialize(particle: Particle): void;
-    mutate(particle: any, time: any, index: any): void;
+    mutate(particle: Particle, time: any, index: any): void;
     /**
      * Creates a ImageColor behaviour from JSON.
      * @param json

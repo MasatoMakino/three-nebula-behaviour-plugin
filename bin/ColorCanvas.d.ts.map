@@ -1,0 +1,1 @@
+{"version":3,"file":"ColorCanvas.d.ts","sourceRoot":"","sources":["../src/ColorCanvas.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,cAAc,CAAC;AAExC,qBAAa,WAAW;IACtB,MAAM,EAAE,iBAAiB,CAAC;IAC1B,MAAM,CAAC,EAAE,iBAAiB,CAAC;IAE3B,OAAO,CAAC,MAAM,CAAC,QAAQ;WAgBT,mBAAmB,CAC/B,QAAQ,EAAE,QAAQ,EAClB,WAAW,EAAE,WAAW,EACxB,MAAM,EAAE,MAAM;CASjB"}

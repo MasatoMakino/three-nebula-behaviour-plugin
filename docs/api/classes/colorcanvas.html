@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ImageColorCanvas | three-nebula-behaviour-plugin</title>
+	<title>ColorCanvas | three-nebula-behaviour-plugin</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="imagecolorcanvas.html">ImageColorCanvas</a>
+					<a href="colorcanvas.html">ColorCanvas</a>
 				</li>
 			</ul>
-			<h1>Interface ImageColorCanvas</h1>
+			<h1>Class ColorCanvas</h1>
 		</div>
 	</div>
 </header>
@@ -70,10 +70,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="../classes/colorcanvas.html" class="tsd-signature-type">ColorCanvas</a>
+						<span class="target">ColorCanvas</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">ImageColorCanvas</span>
+								<a href="../interfaces/imagecolorcanvas.html" class="tsd-signature-type">ImageColorCanvas</a>
 							</li>
 						</ul>
 					</li>
@@ -86,15 +86,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="imagecolorcanvas.html#buffer" class="tsd-kind-icon">buffer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="imagecolorcanvas.html#canvas" class="tsd-kind-icon">canvas</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imagecolorcanvas.html#isloaded" class="tsd-kind-icon">is<wbr>Loaded</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="colorcanvas.html#buffer" class="tsd-kind-icon">buffer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="colorcanvas.html#canvas" class="tsd-kind-icon">canvas</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-static"><a href="imagecolorcanvas.html#updateparticlecolor" class="tsd-kind-icon">update<wbr>Particle<wbr>Color</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="colorcanvas.html#getcolor" class="tsd-kind-icon">get<wbr>Color</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="colorcanvas.html#updateparticlecolor" class="tsd-kind-icon">update<wbr>Particle<wbr>Color</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,51 +102,64 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="buffer" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> buffer</h3>
 					<div class="tsd-signature tsd-kind-icon">buffer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8ClampedArray</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="../classes/colorcanvas.html">ColorCanvas</a>.<a href="../classes/colorcanvas.html#buffer">buffer</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/MasatoMakino/three-nebula-behaviour-plugin/blob/2321d22/src/ColorCanvas.ts#L5">ColorCanvas.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="canvas" class="tsd-anchor"></a>
 					<h3>canvas</h3>
 					<div class="tsd-signature tsd-kind-icon">canvas<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLCanvasElement</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="../classes/colorcanvas.html">ColorCanvas</a>.<a href="../classes/colorcanvas.html#canvas">canvas</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/MasatoMakino/three-nebula-behaviour-plugin/blob/2321d22/src/ColorCanvas.ts#L4">ColorCanvas.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="isloaded" class="tsd-anchor"></a>
-					<h3>is<wbr>Loaded</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Loaded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/three-nebula-behaviour-plugin/blob/2321d22/src/ImageColor.ts#L8">ImageColor.ts:8</a></li>
-						</ul>
-					</aside>
-				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-static">
-					<a name="updateparticlecolor" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> update<wbr>Particle<wbr>Color</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Particle<wbr>Color<span class="tsd-signature-symbol">(</span>particle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Particle</span>, colorCanvas<span class="tsd-signature-symbol">: </span><a href="../classes/colorcanvas.html" class="tsd-signature-type">ColorCanvas</a>, energy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<a name="getcolor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Color</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Color<span class="tsd-signature-symbol">(</span>colorCanvas<span class="tsd-signature-symbol">: </span><a href="colorcanvas.html" class="tsd-signature-type">ColorCanvas</a>, energy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="../classes/colorcanvas.html">ColorCanvas</a>.<a href="../classes/colorcanvas.html#updateparticlecolor">updateParticleColor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MasatoMakino/three-nebula-behaviour-plugin/blob/2321d22/src/ColorCanvas.ts#L7">ColorCanvas.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>colorCanvas: <a href="colorcanvas.html" class="tsd-signature-type">ColorCanvas</a></h5>
+								</li>
+								<li>
+									<h5>energy: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="updateparticlecolor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> update<wbr>Particle<wbr>Color</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Particle<wbr>Color<span class="tsd-signature-symbol">(</span>particle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Particle</span>, colorCanvas<span class="tsd-signature-symbol">: </span><a href="colorcanvas.html" class="tsd-signature-type">ColorCanvas</a>, energy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
 									<li>Defined in <a href="https://github.com/MasatoMakino/three-nebula-behaviour-plugin/blob/2321d22/src/ColorCanvas.ts#L23">ColorCanvas.ts:23</a></li>
 								</ul>
@@ -157,7 +170,7 @@
 									<h5>particle: <span class="tsd-signature-type">Particle</span></h5>
 								</li>
 								<li>
-									<h5>colorCanvas: <a href="../classes/colorcanvas.html" class="tsd-signature-type">ColorCanvas</a></h5>
+									<h5>colorCanvas: <a href="colorcanvas.html" class="tsd-signature-type">ColorCanvas</a></h5>
 								</li>
 								<li>
 									<h5>energy: <span class="tsd-signature-type">number</span></h5>
@@ -179,44 +192,44 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="../classes/colorcanvas.html" class="tsd-kind-icon">Color<wbr>Canvas</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="../classes/gradientcolor.html" class="tsd-kind-icon">Gradient<wbr>Color</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="../classes/imagecolor.html" class="tsd-kind-icon">Image<wbr>Color</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="gradientcolorjson.html" class="tsd-kind-icon">Gradient<wbr>ColorJSON</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="gradientoption.html" class="tsd-kind-icon">Gradient<wbr>Option</a>
-					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="imagecolorcanvas.html" class="tsd-kind-icon">Image<wbr>Color<wbr>Canvas</a>
+					<li class="current tsd-kind-class">
+						<a href="colorcanvas.html" class="tsd-kind-icon">Color<wbr>Canvas</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="imagecolorcanvas.html#buffer" class="tsd-kind-icon">buffer</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="colorcanvas.html#buffer" class="tsd-kind-icon">buffer</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="imagecolorcanvas.html#canvas" class="tsd-kind-icon">canvas</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="colorcanvas.html#canvas" class="tsd-kind-icon">canvas</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="imagecolorcanvas.html#isloaded" class="tsd-kind-icon">is<wbr>Loaded</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+								<a href="colorcanvas.html#getcolor" class="tsd-kind-icon">get<wbr>Color</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-static">
-								<a href="imagecolorcanvas.html#updateparticlecolor" class="tsd-kind-icon">update<wbr>Particle<wbr>Color</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="colorcanvas.html#updateparticlecolor" class="tsd-kind-icon">update<wbr>Particle<wbr>Color</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="gradientcolor.html" class="tsd-kind-icon">Gradient<wbr>Color</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="imagecolor.html" class="tsd-kind-icon">Image<wbr>Color</a>
+					</li>
 					<li class=" tsd-kind-interface">
-						<a href="imagecolorjson.html" class="tsd-kind-icon">Image<wbr>ColorJSON</a>
+						<a href="../interfaces/gradientcolorjson.html" class="tsd-kind-icon">Gradient<wbr>ColorJSON</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/gradientoption.html" class="tsd-kind-icon">Gradient<wbr>Option</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/imagecolorcanvas.html" class="tsd-kind-icon">Image<wbr>Color<wbr>Canvas</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/imagecolorjson.html" class="tsd-kind-icon">Image<wbr>ColorJSON</a>
 					</li>
 				</ul>
 			</nav>
