@@ -1,12 +1,10 @@
 import { Particle } from "three-nebula";
-
 import { Behaviour } from "three-nebula/src/behaviour";
 import { getEasingByName } from "three-nebula/src/ease";
 import { SUPPORTED_JSON_BEHAVIOUR_TYPES } from "three-nebula/src/core/constants";
+import { ColorCanvas } from "./ColorCanvas";
 
-export interface ImageColorCanvas {
-  canvas: HTMLCanvasElement;
-  buffer?: Uint8ClampedArray;
+export interface ImageColorCanvas extends ColorCanvas {
   isLoaded: boolean;
 }
 
@@ -74,23 +72,18 @@ export class ImageColor extends Behaviour {
     particle.useAlpha = true;
   }
 
-  mutate(particle, time, index) {
+  mutate(particle: Particle, time, index) {
     //TODO : color.mutate.energize has not index prop.
     // @ts-ignore
     this.energize(particle, time);
 
     if (particle.transform.colorCanvas.isLoaded) {
-      const canvas = particle.transform.colorCanvas.canvas;
-      const buffer = particle.transform.colorCanvas.buffer;
-
-      // @ts-ignore
-      const x = Math.floor(canvas.width * (1.0 - this.energy));
-      const index = x * 4;
-
-      particle.color.r = buffer[index] / 255;
-      particle.color.g = buffer[index + 1] / 255;
-      particle.color.b = buffer[index + 2] / 255;
-      particle.alpha = buffer[index + 3] / 255;
+      ColorCanvas.updateParticleColor(
+        particle,
+        particle.transform.colorCanvas,
+        // @ts-ignore
+        this.energy
+      );
     } else {
       particle.color.r = 0;
       particle.color.g = 0;
