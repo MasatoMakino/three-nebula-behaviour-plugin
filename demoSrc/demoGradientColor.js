@@ -57,7 +57,7 @@ class Study {
     this.life = new Life(6);
 
     this.emitter
-      .setRate(new Rate(new Span(4, 16), 0.1))
+      .setRate(new Rate(new Span(2, 8), 0.1))
       .setInitializers([
         new Position(new PointZone(0, 0)),
         new Mass(1),

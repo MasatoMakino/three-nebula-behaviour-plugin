@@ -68,6 +68,75 @@
 					<h1>three-nebula-behaviour-plugin</h1>
 				</a>
 				<p>Custom behaviours for three-nebula.</p>
+				<p><a href="LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="MIT License"></a></p>
+				<p><a href="https://github.com/MasatoMakino/three-nebula-behaviour-plugin">GitHub repository</a></p>
+				<a href="#demo" id="demo" style="color: inherit; text-decoration: none;">
+					<h2>Demo</h2>
+				</a>
+				<p><a href="https://masatomakino.github.io/three-nebula-behaviour-plugin/demo/image_color">Color behaviour from an image</a></p>
+				<p><a href="https://masatomakino.github.io/three-nebula-behaviour-plugin/demo/gradient_color">Color behaviour from canvas gradients</a></p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h3>Install</h3>
+				</a>
+				<pre><code class="language-bash">npm install three three-nebula --save-dev</code></pre>
+				<p>and</p>
+				<pre><code class="language-bash">npm install https://github.com/MasatoMakino/three-nebula-behaviour-plugin.git --save-dev</code></pre>
+				<a href="#import" id="import" style="color: inherit; text-decoration: none;">
+					<h3>Import</h3>
+				</a>
+				<p>three-nebula-behaviour-plugin is composed of ES6 modules and TypeScript d.ts files.</p>
+				<p>At first, import classes,</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { ImageColor } <span class="hljs-keyword">from</span> <span class="hljs-string">"../three-nebula-behaviour-plugin"</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> THREE <span class="hljs-keyword">from</span> <span class="hljs-string">"three"</span>;
+<span class="hljs-keyword">import</span> {
+  Emitter,
+  Mass,
+  Rate,
+  Span,
+  SpriteRenderer,
+  System
+} <span class="hljs-keyword">from</span> <span class="hljs-string">"three-nebula"</span>;</code></pre>
+				<p>and set behaviour to emitter</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> system = <span class="hljs-keyword">new</span> System();
+<span class="hljs-keyword">const</span> emitter = <span class="hljs-keyword">new</span> Emitter();
+<span class="hljs-keyword">const</span> renderer = <span class="hljs-keyword">new</span> SpriteRenderer(scene, THREE);
+
+<span class="hljs-keyword">const</span> imageColor = <span class="hljs-keyword">new</span> ImageColor(<span class="hljs-string">"./img/hue_val.png"</span>);
+
+<span class="hljs-keyword">this</span>.emitter
+  .setRate(<span class="hljs-keyword">new</span> Rate(<span class="hljs-keyword">new</span> Span(<span class="hljs-number">2</span>, <span class="hljs-number">8</span>), <span class="hljs-number">0.1</span>))
+  .setInitializers([<span class="hljs-keyword">new</span> Mass(<span class="hljs-number">1</span>)])
+  .setBehaviours([imageColor])
+  .emit();
+
+system.addEmitter(emitter).addRenderer(renderer);</code></pre>
+				<a href="#unimplemented-features" id="unimplemented-features" style="color: inherit; text-decoration: none;">
+					<h2>Unimplemented features</h2>
+				</a>
+				<a href="#systemfromjson-and-fromjsonasync" id="systemfromjson-and-fromjsonasync" style="color: inherit; text-decoration: none;">
+					<h3>System.fromJson and fromJSONAsync</h3>
+				</a>
+				<p><a href="https://creativelifeform.github.io/three-nebula/api/function/index.html#static-function-fromJSON">System.fromJson()</a> is not supported.</p>
+				<a href="#why" id="why" style="color: inherit; text-decoration: none;">
+					<h4>Why</h4>
+				</a>
+				<ul>
+					<li>Plugin script can not add custom type to <a href="https://creativelifeform.github.io/three-nebula/api/variable/index.html#static-variable-SUPPORTED_JSON_BEHAVIOUR_TYPES">SUPPORTED_JSON_BEHAVIOUR_TYPES</a>.
+					It use in <a href="https://creativelifeform.github.io/three-nebula/api/file/src/core/fromJSON.js.html#lineNumber62">this</a>.</li>
+					<li>Plugin script can not add custom constructor to <a href="https://github.com/creativelifeform/three-nebula/blob/master/src/behaviour/index.js">behaviour/index.js</a>.
+					It use in <a href="https://creativelifeform.github.io/three-nebula/api/file/src/core/fromJSON.js.html#lineNumber68">this</a>.</li>
+				</ul>
+				<a href="#api-documents" id="api-documents" style="color: inherit; text-decoration: none;">
+					<h2>API documents</h2>
+				</a>
+				<p><a href="https://masatomakino.github.io/three-nebula-behaviour-plugin/api/">API documents</a></p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p><a href="LICENSE">MIT licensed</a>.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
