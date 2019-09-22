@@ -71,7 +71,10 @@ system.addEmitter(emitter).addRenderer(renderer);
 
 #### Why
 
-Plugin script can not add custom type to [SUPPORTED_JSON_BEHAVIOUR_TYPES](https://creativelifeform.github.io/three-nebula/api/variable/index.html#static-variable-SUPPORTED_JSON_BEHAVIOUR_TYPES).
+- Plugin script can not add custom type to [SUPPORTED_JSON_BEHAVIOUR_TYPES](https://creativelifeform.github.io/three-nebula/api/variable/index.html#static-variable-SUPPORTED_JSON_BEHAVIOUR_TYPES).
+  It use in [this](https://creativelifeform.github.io/three-nebula/api/file/src/core/fromJSON.js.html#lineNumber62).
+- Plugin script can not add custom constructor to [behaviour/index.js](https://github.com/creativelifeform/three-nebula/blob/master/src/behaviour/index.js).
+  It use in [this](https://creativelifeform.github.io/three-nebula/api/file/src/core/fromJSON.js.html#lineNumber68).
 
 ## API documents
 
