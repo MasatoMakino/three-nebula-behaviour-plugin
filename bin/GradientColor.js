@@ -1,4 +1,4 @@
-import { Behaviour } from "three-nebula/src/behaviour";
+import Behaviour from "three-nebula/src/behaviour/Behaviour";
 import { getEasingByName } from "three-nebula/src/ease";
 import { SUPPORTED_JSON_BEHAVIOUR_TYPES } from "three-nebula/src/core/constants";
 import { ColorCanvas } from "./ColorCanvas";
