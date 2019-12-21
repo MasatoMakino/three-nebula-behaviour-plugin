@@ -8,9 +8,7 @@ Custom behaviours for three-nebula.
 
 ## Demo
 
-[Color behaviour from an image](https://masatomakino.github.io/three-nebula-behaviour-plugin/demo/image_color)
-
-[Color behaviour from canvas gradients](https://masatomakino.github.io/three-nebula-behaviour-plugin/demo/gradient_color)
+[Demo pages](https://masatomakino.github.io/three-nebula-behaviour-plugin/demo)
 
 ## Getting Started
 
@@ -33,7 +31,7 @@ three-nebula-behaviour-plugin is composed of ES6 modules and TypeScript d.ts fil
 At first, import classes,
 
 ```javascript
-import { ImageColor } from "../three-nebula-behaviour-plugin";
+import { ImageColor } from "three-nebula-behaviour-plugin";
 import * as THREE from "three";
 import {
   Emitter,
