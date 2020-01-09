@@ -1,5 +1,5 @@
 import { Common } from "./Common";
-import { GradientColor, ImageColor } from "../bin";
+import { GradientColor, ImageColor } from "../esm";
 import * as THREE from "three";
 import {
   Emitter,
