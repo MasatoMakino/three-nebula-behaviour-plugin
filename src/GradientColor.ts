@@ -1,7 +1,7 @@
 import { Particle } from "three-nebula";
 import Behaviour from "three-nebula/src/behaviour/Behaviour";
-import { getEasingByName } from "three-nebula/src/ease";
 import { SUPPORTED_JSON_BEHAVIOUR_TYPES } from "three-nebula/src/core/constants";
+import { getEasingByName } from "three-nebula/src/ease";
 import { ColorCanvas } from "./ColorCanvas";
 
 export interface GradientOption {
@@ -42,7 +42,7 @@ export class GradientColor extends Behaviour {
 
   initCanvas(colors: GradientOption[]): void {
     this.gradientCanvas = {
-      canvas: document.createElement("canvas")
+      canvas: document.createElement("canvas"),
     };
 
     const canvas = this.gradientCanvas.canvas;
@@ -55,7 +55,7 @@ export class GradientColor extends Behaviour {
       canvas.width,
       canvas.height
     );
-    colors.forEach(color => {
+    colors.forEach((color) => {
       gradient.addColorStop(color.offset, color.color);
     });
     g.fillStyle = gradient;

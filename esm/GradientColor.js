@@ -1,6 +1,6 @@
 import Behaviour from "three-nebula/src/behaviour/Behaviour";
-import { getEasingByName } from "three-nebula/src/ease";
 import { SUPPORTED_JSON_BEHAVIOUR_TYPES } from "three-nebula/src/core/constants";
+import { getEasingByName } from "three-nebula/src/ease";
 import { ColorCanvas } from "./ColorCanvas";
 export class GradientColor extends Behaviour {
     constructor(colors, life, easing, isEnabled = true) {
@@ -17,14 +17,14 @@ export class GradientColor extends Behaviour {
     }
     initCanvas(colors) {
         this.gradientCanvas = {
-            canvas: document.createElement("canvas")
+            canvas: document.createElement("canvas"),
         };
         const canvas = this.gradientCanvas.canvas;
         canvas.width = 256;
         canvas.height = 1;
         const g = canvas.getContext("2d");
         const gradient = g.createLinearGradient(0, canvas.height, canvas.width, canvas.height);
-        colors.forEach(color => {
+        colors.forEach((color) => {
             gradient.addColorStop(color.offset, color.color);
         });
         g.fillStyle = gradient;

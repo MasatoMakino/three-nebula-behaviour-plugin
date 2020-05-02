@@ -39,7 +39,7 @@ import {
   Rate,
   Span,
   SpriteRenderer,
-  System
+  System,
 } from "three-nebula";
 ```
 
@@ -62,6 +62,16 @@ system.addEmitter(emitter).addRenderer(renderer);
 ```
 
 ## Unimplemented features
+
+### three-nebula ^5.1.1
+
+Three-nebula version 5.1.1 and above is not supported because the src directory has been removed.
+
+Package update will resume when the next element is accessible.
+
+- Behaviour
+- getEasingByName
+- SUPPORTED_JSON_BEHAVIOUR_TYPES
 
 ### System.fromJson and fromJSONAsync
 
