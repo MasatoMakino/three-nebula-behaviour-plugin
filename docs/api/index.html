@@ -88,24 +88,24 @@
 				</a>
 				<p>three-nebula-behaviour-plugin is composed of ES6 modules and TypeScript d.ts files.</p>
 				<p>At first, import classes,</p>
-				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { ImageColor } <span class="hljs-keyword">from</span> <span class="hljs-string">"three-nebula-behaviour-plugin"</span>;
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> THREE <span class="hljs-keyword">from</span> <span class="hljs-string">"three"</span>;
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { ImageColor } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;three-nebula-behaviour-plugin&quot;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> THREE <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;three&quot;</span>;
 <span class="hljs-keyword">import</span> {
   Emitter,
   Mass,
   Rate,
   Span,
   SpriteRenderer,
-  System
-} <span class="hljs-keyword">from</span> <span class="hljs-string">"three-nebula"</span>;</code></pre>
+  System,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;three-nebula&quot;</span>;</code></pre>
 				<p>and set behaviour to emitter</p>
 				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> system = <span class="hljs-keyword">new</span> System();
 <span class="hljs-keyword">const</span> emitter = <span class="hljs-keyword">new</span> Emitter();
 <span class="hljs-keyword">const</span> renderer = <span class="hljs-keyword">new</span> SpriteRenderer(scene, THREE);
 
-<span class="hljs-keyword">const</span> imageColor = <span class="hljs-keyword">new</span> ImageColor(<span class="hljs-string">"./img/hue_val.png"</span>);
+<span class="hljs-keyword">const</span> imageColor = <span class="hljs-keyword">new</span> ImageColor(<span class="hljs-string">&quot;./img/hue_val.png&quot;</span>);
 
-<span class="hljs-keyword">this</span>.emitter
+<span class="hljs-built_in">this</span>.emitter
   .setRate(<span class="hljs-keyword">new</span> Rate(<span class="hljs-keyword">new</span> Span(<span class="hljs-number">2</span>, <span class="hljs-number">8</span>), <span class="hljs-number">0.1</span>))
   .setInitializers([<span class="hljs-keyword">new</span> Mass(<span class="hljs-number">1</span>)])
   .setBehaviours([imageColor])
@@ -115,6 +115,16 @@ system.addEmitter(emitter).addRenderer(renderer);</code></pre>
 				<a href="#unimplemented-features" id="unimplemented-features" style="color: inherit; text-decoration: none;">
 					<h2>Unimplemented features</h2>
 				</a>
+				<a href="#three-nebula-511" id="three-nebula-511" style="color: inherit; text-decoration: none;">
+					<h3>three-nebula ^5.1.1</h3>
+				</a>
+				<p>Three-nebula version 5.1.1 and above is not supported because the src directory has been removed.</p>
+				<p>Package update will resume when the next element is accessible.</p>
+				<ul>
+					<li>Behaviour</li>
+					<li>getEasingByName</li>
+					<li>SUPPORTED_JSON_BEHAVIOUR_TYPES</li>
+				</ul>
 				<a href="#systemfromjson-and-fromjsonasync" id="systemfromjson-and-fromjsonasync" style="color: inherit; text-decoration: none;">
 					<h3>System.fromJson and fromJSONAsync</h3>
 				</a>
@@ -201,6 +211,5 @@ system.addEmitter(emitter).addRenderer(renderer);</code></pre>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
