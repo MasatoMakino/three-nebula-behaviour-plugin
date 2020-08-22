@@ -35,7 +35,6 @@
     "start:dev": "gulp start_dev",
     "build": "gulp build",
     "build:clean": "gulp build_clean",
-    "doc:card": "repoimg -n three-nebula-behaviour-plugin -o ./docs/card.png",
     "checkout:docs": "git checkout HEAD ./docs/"
   },
   "husky": {

@@ -4,7 +4,7 @@ Custom behaviours for three-nebula.
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-[GitHub repository](https://github.com/MasatoMakino/three-nebula-behaviour-plugin)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=MasatoMakino&repo=three-nebula-behaviour-plugin&show_owner=true)](https://github.com/MasatoMakino/three-nebula-behaviour-plugin)
 
 ## Demo
 
