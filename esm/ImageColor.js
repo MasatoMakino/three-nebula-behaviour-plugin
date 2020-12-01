@@ -1,15 +1,10 @@
-import Behaviour from "three-nebula/src/behaviour/Behaviour";
-import { getEasingByName } from "three-nebula/src/ease";
-import { SUPPORTED_JSON_BEHAVIOUR_TYPES } from "three-nebula/src/core/constants";
-import { ColorCanvas } from "./ColorCanvas";
+import {Behaviour} from "three-nebula";
+import {ColorCanvas} from "./ColorCanvas";
+
 export class ImageColor extends Behaviour {
     constructor(url, life, easing, isEnabled = true) {
         super(life, easing, ImageColor.TYPE, isEnabled);
         this.reset(url);
-    }
-    //TODO Plugin can not insert Behaviour Type Constant.
-    static addSupport() {
-        SUPPORTED_JSON_BEHAVIOUR_TYPES.push(this.TYPE);
     }
     reset(url, life, easing) {
         this.initCanvas(url);
@@ -18,7 +13,7 @@ export class ImageColor extends Behaviour {
     initCanvas(url) {
         this.colorCanvas = {
             canvas: document.createElement("canvas"),
-            isLoaded: false
+            isLoaded: false,
         };
         const canvas = this.colorCanvas.canvas;
         canvas.width = 256;
@@ -53,14 +48,6 @@ export class ImageColor extends Behaviour {
             particle.color.b = 0;
             particle.alpha = 0.0;
         }
-    }
-    /**
-     * Creates a ImageColor behaviour from JSON.
-     * @param json
-     */
-    static fromJSON(json) {
-        const { url, life, easing, isEnabled = true } = json;
-        return new ImageColor(url, life, getEasingByName(easing), isEnabled);
     }
 }
 ImageColor.TYPE = "ImageColor";
