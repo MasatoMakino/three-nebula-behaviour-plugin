@@ -1,19 +1,9 @@
-import { Particle } from "three-nebula";
-import Behaviour from "three-nebula/src/behaviour/Behaviour";
-import { SUPPORTED_JSON_BEHAVIOUR_TYPES } from "three-nebula/src/core/constants";
-import { getEasingByName } from "three-nebula/src/ease";
+import { Behaviour, Particle } from "three-nebula";
 import { ColorCanvas } from "./ColorCanvas";
 
 export interface GradientOption {
   offset: number;
   color: string;
-}
-
-export interface GradientColorJSON {
-  colors: GradientOption[];
-  life?: number;
-  easing?: string;
-  isEnabled?: boolean;
 }
 
 export class GradientColor extends Behaviour {
@@ -28,11 +18,6 @@ export class GradientColor extends Behaviour {
   ) {
     super(life, easing, GradientColor.TYPE, isEnabled);
     this.reset(colors);
-  }
-
-  //TODO Plugin can not insert Behaviour Type Constant.
-  public static addSupport(): void {
-    SUPPORTED_JSON_BEHAVIOUR_TYPES.push(this.TYPE);
   }
 
   reset(colors: GradientOption[], life?: number, easing?: Function) {
@@ -85,14 +70,5 @@ export class GradientColor extends Behaviour {
       // @ts-ignore
       this.energy
     );
-  }
-
-  /**
-   * Creates a GradientColor behaviour from JSON.
-   * @param json
-   */
-  public static fromJSON(json: GradientColorJSON): GradientColor {
-    const { colors, life, easing, isEnabled = true } = json;
-    return new GradientColor(colors, life, getEasingByName(easing), isEnabled);
   }
 }

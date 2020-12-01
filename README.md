@@ -4,7 +4,7 @@ Custom behaviours for three-nebula.
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=MasatoMakino&repo=three-nebula-behaviour-plugin&show_owner=true)](https://github.com/MasatoMakino/three-nebula-behaviour-plugin)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=MasatoMakino&repo=three-nebula-behaviour-plugin)](https://github.com/MasatoMakino/three-nebula-behaviour-plugin)
 
 ## Demo
 
@@ -62,16 +62,6 @@ system.addEmitter(emitter).addRenderer(renderer);
 ```
 
 ## Unimplemented features
-
-### three-nebula ^5.1.1
-
-Three-nebula version 5.1.1 and above is not supported because the src directory has been removed.
-
-Package update will resume when the next element is accessible.
-
-- Behaviour
-- getEasingByName
-- SUPPORTED_JSON_BEHAVIOUR_TYPES
 
 ### System.fromJson and fromJSONAsync
 
