@@ -1,6 +1,5 @@
-import {Behaviour} from "three-nebula";
-import {ColorCanvas} from "./ColorCanvas";
-
+import { Behaviour } from "three-nebula";
+import { ColorCanvas } from "./ColorCanvas";
 export class GradientColor extends Behaviour {
     constructor(colors, life, easing, isEnabled = true) {
         super(life, easing, GradientColor.TYPE, isEnabled);

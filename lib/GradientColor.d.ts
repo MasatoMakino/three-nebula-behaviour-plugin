@@ -1,6 +1,5 @@
-import {Behaviour, Particle} from "three-nebula";
-import {ColorCanvas} from "./ColorCanvas";
-
+import { Behaviour, Particle } from "three-nebula";
+import { ColorCanvas } from "./ColorCanvas";
 export interface GradientOption {
     offset: number;
     color: string;

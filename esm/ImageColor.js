@@ -1,6 +1,5 @@
-import {Behaviour} from "three-nebula";
-import {ColorCanvas} from "./ColorCanvas";
-
+import { Behaviour } from "three-nebula";
+import { ColorCanvas } from "./ColorCanvas";
 export class ImageColor extends Behaviour {
     constructor(url, life, easing, isEnabled = true) {
         super(life, easing, ImageColor.TYPE, isEnabled);
