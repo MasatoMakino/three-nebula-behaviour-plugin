@@ -1,6 +1,6 @@
 {
   "name": "three-nebula-behaviour-plugin",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Custom behaviours for three-nebula.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
