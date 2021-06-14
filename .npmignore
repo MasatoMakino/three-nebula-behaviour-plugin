@@ -1,0 +1,9 @@
+# .npmignore
+/.husky
+/src
+/docs
+/demoSrc
+.prettierignore
+gulpfile.ts
+tsconfig.esm.json
+tsconfig.json
