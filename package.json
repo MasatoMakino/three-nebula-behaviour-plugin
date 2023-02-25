@@ -39,7 +39,8 @@
     "demo": "npx @masatomakino/gulptask-demo-page --body '<canvas id=\"webgl-canvas\" width=\"640\" height=\"480\"></canvas>'",
     "server": "browser-sync ./docs/demo -w",
     "watch:demo": "npm run demo -- -W",
-    "watch:tsc": "tsc -W --incremental & tsc -W --incremental --project tsconfig.esm.json"
+    "watch:tsc": "tsc -W --incremental & tsc -W --incremental --project tsconfig.esm.json",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
